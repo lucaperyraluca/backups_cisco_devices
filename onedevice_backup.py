@@ -27,8 +27,6 @@ ssh_client.connect(**router, look_for_keys=False, allow_agent=False)
 
 shell = ssh_client.invoke_shell()
 shell.send('terminal length 0\n')
-#shell.send('show version\n')
-#shell.send('show ip interface brief\n')
 shell.send('show running-config\n')
 time.sleep(1)
 
